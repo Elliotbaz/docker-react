@@ -4,8 +4,6 @@ services:
   - docker
 
 before_install:
-  - echo "AWS_ACCESS_KEY_ID is set to $AWS_ACCESS_KEY_ID"
-  - echo "AWS_SECRET_ACCESS_KEY is set to $AWS_SECRET_ACCESS_KEY"
   - docker build -t elliotbazuaye/docker-react -f Dockerfile.dev .
 
 script:
