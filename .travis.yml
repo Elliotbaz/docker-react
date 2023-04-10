@@ -7,4 +7,4 @@ before_install:
   - docker build -t elliotbazuaye/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true elliotbazuaye/docker-react npm run test -- --coverage --exit-code 0
+  - docker run -e CI=true elliotbazuaye/docker-react npm run test -- --coverage
