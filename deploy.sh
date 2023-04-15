@@ -1,10 +1,10 @@
 #!/bin/bash
 
 set -e
-
+source .env
 # Set AWS credentials using environment variables
-export AWS_ACCESS_KEY_ID="AKIAQT3NMMEK7RUG5B5Q"
-export AWS_SECRET_ACCESS_KEY="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"
+export AWS_ACCESS_KEY_ID= $AWS_ACCESS_KEY_ID
+export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
 export AWS_DEFAULT_REGION=us-east-1
 
 # Authenticate Docker to AWS ECR
