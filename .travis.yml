@@ -13,8 +13,12 @@ before_deploy:
   - pip install --user awscli
 
 deploy:
-  provider: script
-  script: bash deploy.sh
-  skip_cleanup: true
+  provider: elasticbeanstalk
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  region: "Global"
+  app: "docker-react"
+  env: "Dockerreact-env"
+  bucket_name: "elasticbeanstalk-us-east-1-042642202901"
   on:
     branch: main
