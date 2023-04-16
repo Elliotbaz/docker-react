@@ -9,9 +9,6 @@ before_install:
 script:
   - docker run -e CI=true elliotbazuaye/docker-react npm run test -- --coverage
 
-before_deploy:
-  - pip install --user awscli
-
 deploy:
   provider: elasticbeanstalk
   region: us-east-1
