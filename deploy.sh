@@ -8,7 +8,7 @@ pip install python-dotenv
 # Load AWS credentials from .env file
 export $(grep -v '^#' .env | xargs)
 
-# Set AWS credentials using environment var
+# Set AWS credentials using environment variable
 export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
 export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
 export AWS_DEFAULT_REGION=us-east-1
